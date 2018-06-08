@@ -16,8 +16,8 @@ This repository contains implementations of a few interesting and famous algorit
 # Huffman Encoding
    This is the famous Huffman Encoding for losseless data compression. The programme generates binary codes which are prefix
    free (and therefore no clashing possible) and are such that it minimises the Average Encoding Length, defined as ( for a 
-   binary Tree T, where the probability of occurence of the ith data string in the given data is p[i] and depth of the data 
-   string in T is d[i])
+   binary Tree T, where the probability of occurence of the ith data string in the given data is pi and depth of the data 
+   string in T is di)
     
    ![imageforgithub](https://user-images.githubusercontent.com/23059190/41183893-a48242e2-6b9a-11e8-8935-6097893c4ebe.png)
  
