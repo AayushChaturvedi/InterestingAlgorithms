@@ -1,3 +1,8 @@
+/*
+Prime's Algorithms for finding the Minimum Spanning Tree in an undirected, weighted graphs, edge weights are considered distinct and non-negative. The input format is as below : 
+First line : <number of nodes in the graphs = n> <number of edges in the graphs = m>
+Next m lines : <source node for edge j, considering 1 based indices> <destination> <edge weight>
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
