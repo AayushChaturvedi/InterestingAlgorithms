@@ -23,8 +23,7 @@ This repository contains implementations of a few interesting and famous algorit
  
    The input format is as below : 
         
-        First line : < The number of strings to be encoded, the strings are numbered 1,2,...n >
-        Next n lines : < The frequency of the ith string in the ith line >
+        First line : < Your string to be encoded, ended by a end of line >
         
    The programme is a brute force direct implementation O(n * n), for a faster one, min heaps should be used instead of vector
    (list).
