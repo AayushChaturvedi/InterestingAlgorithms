@@ -2,10 +2,13 @@
 
 using namespace std;
 
-#define MOD 1000000007
-#define N 1003
+#define N 500
+#define ff first
+#define ss second
+#define ld long double
 
-int w[N];
+string s, t;
+map <int, int> mp;
 string codes[N];
 int len[N];
 
@@ -71,21 +74,44 @@ void bfs(node* temp, string s){
 
 int main(){
 	ios::sync_with_stdio(false);
-	int n; cin>>n;
-	int i;
-	for(i=1; i<=n; i++){
-		cin>>w[i];
+	freopen("inputhuffman.txt", "r", stdin);
+	getline(cin, s);
+	for(auto it : s){
+		mp[it - ' ']++;
+	}
+	for(auto it : mp){
 		node temp;
-		temp.data = i;
-		temp.freq = w[i];
+		temp.data = it.ff;
+		temp.freq = it.ss;
 		temp.left = NULL;
 		temp.right = NULL;
 		nodes.push_back(temp);
 	}
 	node root = build();
 	bfs(&root, "");
-	for(i=1; i<=n; i++){
-		cout<<i<<" "<<len[i]<<" "<<codes[i]<<"\n";
+	/*
+	// Uncomment to see the codes for each character
+	for(auto it : mp){
+		cout<<char(it.ff + ' ')<<" "<<len[it.ff]<<" "<<codes[it.ff]<<"\n";
 	}
+	*/
+	t = "";
+	for(auto it : s){
+		t += codes[it - ' '];
+	}
+	/*
+	// Uncomment to print the orginal texts.
+	cout<<"Original String:\n";
+	cout<<s<<"\n";
+	cout<<"Encoded string:\n";
+	cout<<t<<"\n";
+	*/
+	ld l1 = s.length()*7;
+	ld l2 = t.length();
+	cout<<"Original length:\t"<<l1<<"\nEncoded length :\t"<<l2<<"\n";
+	cout<<"Percentage compression:\n";
+	ld ans = (l2)/l1;
+	ans = ans * 100;
+	cout<<setprecision(5)<<fixed<<ans<<"%";
 	return 0;
 }
