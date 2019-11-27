@@ -30,7 +30,7 @@ public:
 };
 
 ostream& operator<<(ostream &Out, const CN &x){
-	Out<<"("<<x.real<<") + i("<<x.img<<")\n";
+	Out<<"("<<x.real<<") + i("<<x.img<<")";
 	return Out;
 }
 
